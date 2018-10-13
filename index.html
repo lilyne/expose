@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body class="couleur">
+
+    <div id="app" >
+        <h1>AIKIDO</h1>
+
+        <h4>L'aikido est un art japonais fondé par  Morihei Ueshiba.
+            Il ne consiste pas a attaquer mais a se déffendre.
+            On utilise la force de l'autre contre lui.
+            Dans ce sport il n'y a pas de compétition.
+            On peut le pratiquer a main nu mais aussi avec un des fausses armes en bois.
+            C'est armes sont le jo(qui signifie baton),le bokken(sabre en bois),le tanto(couteau en bois)
+            L'aikido arrive en france vers 1951.
+            Il y a aussi des niveau a passer qui s'appelle les grades,puis des danme...
+            Quand on a atteint un nombre de grades on a le hakama.
+        </h4>
+
+        <button @click="diapo()"> diaporama</button>
+        <button @click="quiz()">quiz</button>
+
+        <div v-if="afficher">
+            <img src="https://s2.qwant.com/thumbr/0x0/4/f/d0971caf6413add70de865e4b287715c6e4e99917c2687d0377f5000a92992/12291-zoom-morihei-ueshiba.jpg?u=http%3A%2F%2Ffiles.loudun-aikido.webnode.fr%2F200000007-e901ee9fd6%2F12291-zoom-morihei-ueshiba.jpg&q=0&b=1&p=0&a=1" alt="">
+            <img src="https://s2.qwant.com/thumbr/0x0/5/7/582bc65332991446fd79554893ace2e20da0ad4750712b6539ac23239e0bd0/aikido11.jpg?u=http%3A%2F%2Fjpninfo.com%2Fwp-content%2Fuploads%2F2015%2F05%2Faikido11.jpg&q=0&b=1&p=0&a=1" alt="">
+            <img src="https://s2.qwant.com/thumbr/0x0/f/3/e949d73948dff6a1a2ac8d5642b296c2a23e5b8c7667b8a1c5b0f34607aec7/tanto-japonais-neflier.jpg?u=http%3A%2F%2Fwww.sinonome.org%2F12509-thickbox_default%2Ftanto-japonais-neflier.jpg&q=0&b=1&p=0&a=1" alt="">
+            <img src="https://s2.qwant.com/thumbr/0x0/c/7/fd127f7ec582d4eb1cea1b0f809f4e6962a89ecad4fb0efd6080a04e04c492/012-285-2.jpg?u=http%3A%2F%2Fwww.tozandoshop.com%2Fv%2Fvspfiles%2Fphotos%2F012-285-2.jpg&q=0&b=1&p=0&a=1" alt="">
+            <img src="http://3.bp.blogspot.com/-3Ut-EhTeKLs/U0aJpw0kBnI/AAAAAAAAFv4/qQsW6u8duOY/s1600/AboveTheLaw-02-sg.gif" alt="">
+            <img src="https://media1.tenor.com/images/5ff6661c259e29a7a5463a809859bd3b/tenor.gif?itemid=9782694" alt="">
+            <img src="https://s1.qwant.com/thumbr/0x0/2/0/869b793b6413a4ea1be9b7ce850b0c91c33fb04ffb2efba31f409733dd0b56/41Ft4F6m2VL.jpg?u=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F41Ft4F6m2VL.jpg&q=0&b=1&p=0&a=1" alt="">
+        </div>
+        <div v-if="montrer">
+            <p>Qui a fondé l'aikido?</p>
+            <input type="text" v-model="nom" @keyup.enter="verif1()">
+            <h1>{{ message }}</h1>
+            <p>
+                A l'aikido on attaque ?
+            </p>
+            <button @click="non">vrai</button>
+            <button @click="verite">faux</button>
+            <h1>as tu aimé l'exposé?</h1>
+            <p>répond par oui ou par non</p>
+            <input type="text" v-model="final" @keyup.enter="finalite()" >
+
+
+        <h1>A BIENTOT!</h1>
+        <img src="https://media1.tenor.com/images/315d66f06bba25326e685f843fe14554/tenor.gif?itemid=7910074" alt="">
+            
+        </div>
+
+        
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <script src="vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
